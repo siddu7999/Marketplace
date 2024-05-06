@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Link to import the Roboto font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>Marketplace</title>
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section of the page -->
+    <header>
+        <!-- Main heading of the page -->
+        <h1>Marketplace</h1>
+        <div>
+            <!-- Button to trigger wallet connection -->
+            <button id="connectWallet">Connect Wallet</button>
+            <!-- Div to display wallet connection status -->
+            <div id="walletInfo"></div>
+        </div>
+    </header>
+
+    <!-- Main content area of the page -->
+    <main>
+        <!-- Section for listing an item for sale -->
+        <section class="form-section">
+            <h2>List an Item</h2>
+            <!-- Input field for item title -->
+            <input type="text" id="title" placeholder="Item Title">
+            <input type="text" id="description" placeholder="Item Description">
+            <input type="text" id="price" placeholder="Price in Ether">
+            <button id="listItemButton">List Item</button>
+            <!-- Div to display the status of the transaction after listing an item -->
+            <div id="transactionStatus"></div>
+        </section>
+
+        <!-- Section for buying an item -->
+        <section class="form-section">
+            <h2>Buy an Item</h2>
+            <input type="number" id="itemId" placeholder="Item ID">
+            <button id="buyItemButton">Buy Item</button>
+            <!-- Div to display the status of the purchase transaction -->
+            <div id="purchaseStatus"></div>
+        </section>
+
+        <!-- Section to display available items -->
+        <section class="items-display">
+            <h2>Items Available</h2>
+            <!-- List that will be dynamically updated with items available for sale -->
+            <ul id="itemsList"></ul>
+        </section>
+    </main>
+
+    <!-- Importing ethers.js library for interacting with the Ethereum blockchain -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    <!-- Link to external JavaScript file containing the application logic -->
+    <script src="app.js"></script>
+</body>
+</html>

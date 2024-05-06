@@ -1,0 +1,155 @@
+/* General Reset and Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+header {
+    background-color: #004d40;
+    color: #ffffff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header > div {
+    display: flex;
+    flex-direction: column; /* Stack button and info vertically */
+    align-items: center;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+/* Main Content Styling */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-section:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Button and Input Styling */
+button {
+    background-color: #26a69a;
+    color: #ffffff;
+    border: none;
+    padding: 12px 18px;
+    margin-top: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: auto; /* Adjust width for better alignment */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #00796b;
+    transform: translateY(-3px);
+}
+
+input[type='text'], input[type='number'], input[type='file'] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Items Display Enhancements */
+.items-display {
+    grid-column: 1 / -1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #e0f2f1;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+li:hover {
+    background-color: #b2dfdb;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+/* Status Messages */
+#transactionStatus, #purchaseStatus {
+    margin-top: 20px;
+    color: #388e3c;
+}
+
+#transactionStatus.error, #purchaseStatus.error {
+    color: #d32f2f;
+}
+
+/* Wallet Info Styling */
+#walletInfo {
+    margin-top: 10px; /* Space between button and wallet info */
+    color: #ffffff; /* Ensures visibility against the dark background */
+    font-size: 0.9em; /* Smaller font size for wallet info */
+}
+li.item-entry {
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+li.item-entry:hover {
+    background-color: #b2dfdb;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    header > div {
+        align-items: center; /* Center alignment for mobile */
+    }
+}
